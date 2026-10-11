@@ -5,17 +5,7 @@
 <title>Fuja da sua mãe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;800&display=swap">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<canvas id="c"></canvas>
-<div id="hud"></div><div id="toast"></div>
-<button id="hb">Ação</button>
-<div class="ov" id="ov"><div class="card" id="card"></div></div>
-<script src="game1.js"></script>
-<script src="game2.js"></script>
-</body>
-</html>
+<style>
 :root{--card:#fff4e2;--ink:#3a1f2b;--acc:#e8553b;--bg:#241628;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--card:#3a2140;--ink:#fff1de;--acc:#ff7a59;--bg:#241628}}
 :root[data-theme="dark"]{--card:#3a2140;--ink:#fff1de;--acc:#ff7a59;--bg:#241628}
@@ -37,6 +27,14 @@ html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);font-family:
 .card button{margin-top:10px;background:var(--acc);color:#fff;border:0;border-radius:14px;padding:12px 26px;font:800 20px 'Baloo 2',system-ui,sans-serif}
 .card button.q{display:block;width:100%}
 @media (prefers-reduced-motion: reduce){.shake{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud"></div><div id="toast"></div>
+<button id="hb">Ação</button>
+<div class="ov" id="ov"><div class="card" id="card"></div></div>
+<script>
 const $=id=>document.getElementById(id);
 const cv=$('c'),ctx=cv.getContext('2d'),hb=$('hb'),toast=$('toast'),hud=$('hud'),ov=$('ov'),card=$('card');
 const VW=520;
